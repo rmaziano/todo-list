@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+}
+
+.container-div {
+  @apply w-screen h-screen p-12 flex flex-col items-center;
+}
+
+.container-div::before {
+  @apply content-[''] absolute top-0 left-0 w-full h-[300px] bg-hero bg-center bg-cover bg-no-repeat;
+}
+
+.todoItem {
+  @apply flex items-center gap-[10px] w-full p-4 z-2 transition duration-500 ease-out;
+}
+
+.button {
+  @apply w-[30px] h-[30px] bg-white rounded-full shadow-s1 flex items-center justify-center cursor-pointer;
+}
+
+.btn {
+  @apply w-[40px] h-[40px] flex items-center justify-center border rounded-[50%] text-2xl cursor-pointer transition-all duration-200 ease-in-out;
+}
+
+.deleteBtn {
+  @apply bg-white border-red text-red;
+}
+
+.deleteBtn:hover {
+  @apply bg-red border-none text-white;
+}
+
+.editBtn {
+  @apply text-bright-orange;
+}
+
+.editBtn:hover {
+  @apply bg-bright-orange border-none text-white;
+}
+
+.completeBtn {
+  @apply bg-white border-green-color text-green-color;
+}
+
+.completeBtn:hover {
+  @apply bg-green-color border-none text-white;
+}
+
+.completed {
+  @apply bg-green-color border-none text-white;
+}
+
+.wrapper-div {
+  @apply relative w-full h-[70px] mt-auto flex items-center justify-center gap-5;
+}
+
+.addButton {
+  @apply absolute right-0 bottom-0 h-[70px] w-[70px] bg-blue-color border-none outline-0 rounded-[50%] shadow-s1 cursor-pointer text-white text-[1rem] flex items-center justify-center;
+}
+
+.addButton:hover {
+  @apply scale-105;
+}
+
+.addButton:active {
+  @apply scale-95;
+}
+
+.open {
+  @apply w-[500px] h-[70px] right-[50%] rounded-[10px] opacity-100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--light-gray);
+}
